@@ -8,20 +8,19 @@ class TopRatedViewCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.white,
+    return Container(
+      width: 320,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15),
+      ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 15,
-          vertical: 12,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 12),
         child: Column(
           children: [
             Row(
               children: [
-                CircleAvatar(
-                  backgroundImage: AssetImage(AppImages.profile),
-                ),
+                CircleAvatar(backgroundImage: AssetImage(AppImages.profile)),
                 SizedBox(width: 8),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,14 +50,13 @@ class TopRatedViewCard extends StatelessWidget {
             SizedBox(height: 10),
             Row(
               children: [
-                ContainerCardView(
-                  title: "Figma",
-                  color: Color(0xff3B4759),
-                ),
+                ContainerCardView(title: "Figma", color: Color(0xff3B4759)),
+                SizedBox(width: 8),
                 ContainerCardView(
                   title: "Mobile App",
                   color: Color(0xff3B4759),
                 ),
+                SizedBox(width: 8),
                 CustomText(title: "+4", fontSize: 13),
               ],
             ),
@@ -68,11 +66,7 @@ class TopRatedViewCard extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Image.asset(
-                      AppImages.star,
-                      height: 14,
-                      width: 14,
-                    ),
+                    Image.asset(AppImages.star, height: 14, width: 14),
                     SizedBox(width: 5),
                     CustomText(
                       title: "Review",
@@ -96,11 +90,7 @@ class TopRatedViewCard extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Image.asset(
-                      AppImages.location,
-                      height: 14,
-                      width: 14,
-                    ),
+                    Image.asset(AppImages.location, height: 14, width: 14),
                     SizedBox(width: 5),
                     CustomText(
                       title: "Location",
@@ -124,11 +114,7 @@ class TopRatedViewCard extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Image.asset(
-                      AppImages.doller,
-                      height: 14,
-                      width: 14,
-                    ),
+                    Image.asset(AppImages.doller, height: 14, width: 14),
                     SizedBox(width: 5),
                     CustomText(
                       title: "Hourly Rate",

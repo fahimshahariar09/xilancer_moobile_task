@@ -171,11 +171,17 @@ class HomeScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 15),
                 //Recent Job View Card
-                RecentJobViewCard(),
-                SizedBox(height: 10),
-                RecentJobViewCard(),
-                SizedBox(height: 10),
-                RecentJobViewCard(),
+                ListView.builder(
+                  itemCount: 3,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 5),
+                      child: RecentJobViewCard(),
+                    );
+                  },
+                ),
                 SizedBox(height: 10),
                 Container(
                   height: 45,
@@ -217,7 +223,7 @@ class HomeScreen extends StatelessWidget {
                   child: Row(
                     children: [
                       TopRatedViewCard(),
-                      SizedBox(height: 10),
+                      SizedBox(width: 15),
                       TopRatedViewCard(),
                     ],
                   ),

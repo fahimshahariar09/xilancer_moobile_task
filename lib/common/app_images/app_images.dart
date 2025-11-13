@@ -11,4 +11,7 @@ class AppImages {
   static String web = "assets/icons/web.png";
   static String desgin = "assets/icons/desgin.png";
   static String midlevel = "assets/icons/midlevel.png";
+  static String doller = "assets/icons/doller.png";
+  static String star = "assets/icons/star.png";
+  static String location = "assets/icons/location.png";
 }

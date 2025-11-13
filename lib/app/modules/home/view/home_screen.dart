@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:xilancer_moobile_task/app/modules/home/view/widget/categories_view_card.dart';
 import 'package:xilancer_moobile_task/app/modules/home/view/widget/popular_services_view_card.dart';
 import 'package:xilancer_moobile_task/app/modules/home/view/widget/recent_job_view_card.dart';
+import 'package:xilancer_moobile_task/app/modules/home/view/widget/top_rated_view_card.dart';
 import 'package:xilancer_moobile_task/common/app_images/app_images.dart';
 import 'package:xilancer_moobile_task/common/custom_widget/custom_button.dart';
 import 'package:xilancer_moobile_task/common/custom_widget/custom_text.dart';
@@ -174,6 +175,46 @@ class HomeScreen extends StatelessWidget {
               RecentJobViewCard(),
               SizedBox(height: 10),
               RecentJobViewCard(),
+              SizedBox(height: 10),
+              Container(
+                height: 45,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Center(
+                  child: CustomText(
+                    title: "Load More",
+                    color: Color(0xff3B4759),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              //Top Rated Freelancers
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomText(
+                    color: Color(0xff202B37),
+                    title: "Top Rated Freelancers",
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20,
+                  ),
+                  CustomText(
+                    color: Color(0xff202B37),
+                    title: "Explore all",
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
+                  ),
+                ],
+              ),
+              SizedBox(height: 10),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(children: [TopRatedViewCard(), TopRatedViewCard()]),
+              ),
             ],
           ),
         ),

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:xilancer_moobile_task/app/modules/home/view/widget/categories_view_card.dart';
+import 'package:xilancer_moobile_task/app/modules/home/view/widget/popular_services_view_card.dart';
+import 'package:xilancer_moobile_task/app/modules/home/view/widget/recent_job_view_card.dart';
 import 'package:xilancer_moobile_task/common/app_images/app_images.dart';
+import 'package:xilancer_moobile_task/common/custom_widget/custom_button.dart';
 import 'package:xilancer_moobile_task/common/custom_widget/custom_text.dart';
 import 'package:xilancer_moobile_task/common/custom_widget/custom_text_field.dart';
 
@@ -61,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 15),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -88,6 +91,89 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(height: 15),
+              Card(
+                color: Color(0xff01795A),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 20, left: 15),
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CustomText(
+                            title:
+                                "Find the Perfect Freelancer for\nAny Project",
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
+                          SizedBox(height: 10),
+                          CustomButton(
+                            text: "Explore",
+                            width: 150,
+                            color: Color(0xff01795A),
+                            height: 35,
+                            cardColor: Colors.white,
+                          ),
+                        ],
+                      ),
+                      Image.asset(
+                        AppImages.explore,
+                        fit: BoxFit.cover,
+                        height: 150,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 15),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomText(
+                    color: Color(0xff202B37),
+                    title: "Popular Services",
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20,
+                  ),
+                  CustomText(
+                    color: Color(0xff202B37),
+                    title: "Explore all",
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
+                  ),
+                ],
+              ),
+              SizedBox(height: 15),
+              //Popular Services View Card
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    PopularServicesViewCard(),
+                    PopularServicesViewCard(),
+                  ],
+                ),
+              ),
+              SizedBox(height: 15),
+              Row(
+                children: [
+                  CustomText(
+                    color: Color(0xff202B37),
+                    title: "Recent Job Posted",
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20,
+                  ),
+                ],
+              ),
+              SizedBox(height: 15),
+              //Recent Job View Card
+              RecentJobViewCard(),
+              SizedBox(height: 10),
+              RecentJobViewCard(),
+              SizedBox(height: 10),
+              RecentJobViewCard(),
             ],
           ),
         ),
